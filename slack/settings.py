@@ -25,7 +25,7 @@ SECRET_KEY = 'yvfo_(3@*r@a@67@#^zn8lnx=a*!dnb2n5v9@houyu9*2+y&6i'
 DEBUG = True
 
 with open(os.path.join(os.path.dirname(__file__),'host')) as host:
-    ngrok_host = host.read()
+    ngrok_host = next(host).strip()
 
 ALLOWED_HOSTS = [ngrok_host,
                  "127.0.0.1"]
@@ -109,13 +109,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # SLACK API Configurations
 # ----------------------------------------------
 # use your keys
-fn = os.path.join(os.path.dirname(__file__), 'my_file')
 with open(os.path.join(os.path.dirname(__file__),'credentials')) as creds:
 
-    SLACK_CLIENT_ID = next(creds)
-    SLACK_CLIENT_SECRET = next(creds)
-    SLACK_VERIFICATION_TOKEN = next(creds)
-    SLACK_BOT_USER_TOKEN = next(creds)
+    SLACK_CLIENT_ID = next(creds).strip()
+    SLACK_CLIENT_SECRET = next(creds).strip()
+    SLACK_VERIFICATION_TOKEN = next(creds).strip()
+    SLACK_BOT_USER_TOKEN = next(creds).strip()
 
 
 
