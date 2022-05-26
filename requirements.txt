@@ -22,7 +22,7 @@ six==1.11.0
 slackclient==1.2.1
 slackeventsapi==1.1.0
 tensorboard==1.10.0
-tensorflow==1.10.0
+tensorflow==2.7.2
 termcolor==1.1.0
 urllib3==1.23
 websocket-client==0.48.0
